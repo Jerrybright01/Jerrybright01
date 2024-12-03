@@ -1,0 +1,127 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNtpwWJ1s96XxbCnlT0MecN",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Jerrybright01/Jerrybright01/blob/main/Pandas\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 6,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "oMuO2U5Z7iat",
+        "outputId": "bcafbc85-5876-4f2e-b164-ae1c255c5f5f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "a    10\n",
+            "b    30\n",
+            "c    40\n",
+            "d    60\n",
+            "dtype: int64\n"
+          ]
+        }
+      ],
+      "source": [
+        "#create a Series\n",
+        "import pandas as pd\n",
+        "data = [10, 30, 40, 60]\n",
+        "series = pd.Series(data, index=['a', 'b', 'c', 'd'])\n",
+        "print(series)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#create a Datafrtame\n",
+        "data = {'Name': ['Alice', 'Bob', 'Charlie'],\n",
+        "        'Age': [25, 30, 35],\n",
+        "        'City': ['New York', 'San Francisco', 'Los Angeles']}\n",
+        "df = pd.DataFrame(data)\n",
+        "print(df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-1fmzPDN9kKU",
+        "outputId": "4b7ac964-3b53-4630-ceca-933c6d87d686"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "      Name  Age           City\n",
+            "0    Alice   25       New York\n",
+            "1      Bob   30  San Francisco\n",
+            "2  Charlie   35    Los Angeles\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "sample.data.csv\n",
+        "\n",
+        "Name,Age,City,Salary\n",
+        "Alice,25,New York, 50000\n",
+        "Bob,30,Los Angeles,60000\n",
+        "Charlie,35,Chicago,70000\n",
+        "\n",
+        "\n",
+        "#load a CSV file\n",
+        "df = pd.read_csv('sample_data.csv')\n",
+        "print(df)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 106
+        },
+        "id": "hvyVoysn9wkk",
+        "outputId": "83369184-e061-4691-83da-849db08b6ef9"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "invalid syntax (<ipython-input-12-4e033a0ce017>, line 4)",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-12-4e033a0ce017>\"\u001b[0;36m, line \u001b[0;32m4\u001b[0m\n\u001b[0;31m    Alice,25,New York, 50000\u001b[0m\n\u001b[0m                 ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
